@@ -16,5 +16,15 @@ class Anclaje {
         return this.bici;
     }
 
+    void AnclarBici (Movil bici) {
+        this.bici= bici;
+        this.ocupado = true;
+    }
 
+    void LiberarBici () {
+        this.bici = null;
+        this.ocupado = false;
+    }
+
+    
 }

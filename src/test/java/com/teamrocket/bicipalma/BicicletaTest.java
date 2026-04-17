@@ -1,7 +1,8 @@
-package domain.bicicleta;
+package com.teamrocket.bicipalma;
 
 import static org.junit.Assert.assertEquals;
 import com.teamrocket.bicipalma.domain.bicicleta.Bicicleta;
+import com.teamrocket.bicipalma.domain.bicicleta.Movil;
 
 import org.junit.Before;
 import org.junit.Test;

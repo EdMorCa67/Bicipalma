@@ -6,7 +6,6 @@ import com.teamrocket.bicipalma.domain.bicicleta.Movil;
 
 class Anclajes {
 
-     
     private final Anclaje[] anclajes;
 
     Anclajes(int numAnclajes) {
@@ -16,41 +15,40 @@ class Anclajes {
 
     private void crearAnclajes() {
         for (int i = 0; i < anclajes.length; i++) {
-            this.anclajes[i] = new Anclaje();
+            anclajes[i] = new Anclaje();
         }
     }
-    
+
     Anclaje[] anclajes() {
-		return this.anclajes;
+        return anclajes;
     }
-    
+
     int numAnclajes() {
-        return this.anclajes.length;
+        return anclajes.length;
     }
 
     void ocuparAnclaje(int posicion, Movil bici) {
-		this.anclajes[posicion].anclarBici(bici);
+        anclajes[posicion].AnclarBici(bici);
     }
 
     boolean isAnclajeOcupado(int posicion) {
-		return this.anclajes[posicion].isOcupado();
-	  }
+        return anclajes[posicion].ocupado();
+    }
 
     void liberarAnclaje(int posicion) {
-		this.anclajes[posicion].liberarBici();
+        anclajes[posicion].LiberarBici();
     }
-    
+
     Movil getBiciAt(int posicion) {
-        return this.anclajes[posicion].getBici();
+        return anclajes[posicion].getbici();
     }
 
     int seleccionarAnclaje() {
-        Integer idAnclaje = ThreadLocalRandom.current().nextInt(0, numAnclajes());
-        return idAnclaje;
+        return ThreadLocalRandom.current().nextInt(0, numAnclajes());
     }
 
     @Override
     public String toString() {
-        return "Numero de anclajes: " + Integer.toString(numAnclajes());
+        return "Numero de anclajes: " + numAnclajes();
     }
 }
